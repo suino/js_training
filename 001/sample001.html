@@ -8,12 +8,14 @@
     <h1>JavaScriptの勉強</h1>
     <script>
         function sum (a, b) {
+            var localVar = "hoge";
             return a + b;
         }
 
         var result = sum(1, 2);
 
         alert(result);
+        // エラーになる : console.log(localVar);
     </script>
 </body>
 </html>
