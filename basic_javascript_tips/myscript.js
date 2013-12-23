@@ -1,6 +1,2 @@
-if (confirm('削除しますか？')) {
-    alert('削除します');
-} else {
-    alert('しません');
-}
-
+var name = prompt('Enter your name');
+alert('Your name is ' + name);
