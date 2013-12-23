@@ -1,19 +1,10 @@
-var i = 0;
+// 厳密な比較演算子
 
-/*
-var timerId = setInterval(function() {
-    console.log(++i);
-    if (i >= 5) {
-        clearInterval(timerId);
-    }
-}, 1000);
-*/
+var a = 5;
+var b = 5;
+console.log(a == b);  // true
+console.log(a === b); // true
 
-function plusOne() {
-    console.log(++i);
-    var timerId = setTimeout(plusOne, 1000);
-    if (i >= 5) {
-        clearTimeout(timerId);
-    }
-}
-plusOne();
+b = '5';
+console.log(a == b);  // true
+console.log(a === b); // false 型が違う
