@@ -1,11 +1,7 @@
-// 即時関数、無名関数
-
-function helloWorld() {
-    console.log('Hello World');
+if (-1) {
+    console.log('-1 = true');
+} else {
+    console.log('-1 = false');
 }
 
-helloWorld();
-
-(function helloWorld() {
-    console.log('Hello World2');
-})();
+// 数値: 0 or Nan = false
