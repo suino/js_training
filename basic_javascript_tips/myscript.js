@@ -1,9 +1,13 @@
-// 論理演算子
-// AND(&&), OR(||), NOT(!)
+// switch
 
 var x = 0;
-// 0は0以上 && 1は0以上
-// 1つ目の左辺xと2つ目の左辺xの値が違う
-if( (x >= x++) && (x > 0) ){
-    console.log(x); // 1と表示される
+switch (x) {
+    case 0:
+    case 1:
+    case 2:
+        // 0-2はすべてこの処理を通る
+        console.log(x);
+        break;
+    default:
+        break;
 }
