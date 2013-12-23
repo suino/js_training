@@ -7,16 +7,16 @@
 <body>
     <h1>JavaScriptの勉強</h1>
     <script>
-        // JavaScript Object
+        // Array Object
+        // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array?redirectlocale=ja&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray
 
-        var s = new String('this is a pen.');
-        console.log(s.length);
+        var a = new Array(11, 22, 33, 44, 55);
+        var aa = [11, 22, 33, 44, 55];
 
-        var ss = 'this is a pen.';
-        console.log(ss.length); // 別にオブジェクト型だからlength取れるというわけではない
+        console.log(a.join('|'));
+        console.log(aa.join('|'));
 
-        var d = new Date();
-        console.log(d.getFullYear());
+        console.log(a.reverse());
 
     </script>
 </body>
