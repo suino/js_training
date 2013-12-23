@@ -7,13 +7,12 @@
 <body>
     <h1>JavaScriptの勉強</h1>
     <script>
-        // BOM - Browser Object Model
+        // DOM - Document Object Model
 
-        // windowの高さ　ブラウザサイズを変えてみよう
-        console.log(window.innerHeight);
+        // 現在非推奨 console.log(document.width);
+        console.log(document.body.clientWidth); // 現在はこちら
+        document.body.bgColor = 'red';
 
-        // googleに強制的に飛ばされる
-        window.location.href = "http://google.com";
     </script>
 </body>
 </html>
