@@ -1,4 +1,3 @@
-var e = document.getElementById('trigger');
-e.onclick = function() {
+function sayHi() {
     console.log('hi!');
 }
