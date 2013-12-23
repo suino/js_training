@@ -1,13 +1,12 @@
-// switch
-
 var x = 0;
-switch (x) {
-    case 0:
-    case 1:
-    case 2:
-        // 0-2はすべてこの処理を通る
-        console.log(x);
-        break;
-    default:
-        break;
+
+while(x < 10) {
+    console.log(x);
+    x++;
 }
+
+x = 0;
+do {
+    console.log(x);
+    x++;
+} while (x < 10);
