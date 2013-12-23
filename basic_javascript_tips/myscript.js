@@ -1,21 +1,6 @@
-var myList = document.getElementById('myList');
-var list = document.getElementsByTagName('li');
-console.log(myList);
-console.log(list);
-console.log(list[1]);
-
-var fourthLi = document.createElement('li');
-var fourthLink = document.createElement('a');
-fourthLink.href = 'http://google.com';
-var fourthText = document.createTextNode('Four');
-//myList.appendChild(fourthLi).appendChild(fourthText);
-myList.appendChild(fourthLi).appendChild(fourthLink).appendChild(fourthText);
-
-var fifthLi = fourthLi.cloneNode(true);
-fifthLi.innerHTML = '<a href="http://yahoo.co.jp">Five</a>';
-
-// 4の後に追加される
-// myList.appendChild(fifthLi);
-
-// 5を4の前に追加する
-myList.insertBefore(fifthLi, fourthLi);
+var e = document.getElementById('msg');
+e.style.color = 'red';
+e.style.fontWeight = 'bold';
+e.style.background = 'green';
+e.style.fontSize = '24px';
+e.style.border = '8px solid orange';
