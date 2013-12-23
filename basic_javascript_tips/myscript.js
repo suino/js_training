@@ -1,10 +1,11 @@
-// 厳密な比較演算子
+// 即時関数、無名関数
 
-var a = 5;
-var b = 5;
-console.log(a == b);  // true
-console.log(a === b); // true
+function helloWorld() {
+    console.log('Hello World');
+}
 
-b = '5';
-console.log(a == b);  // true
-console.log(a === b); // false 型が違う
+helloWorld();
+
+(function helloWorld() {
+    console.log('Hello World2');
+})();
