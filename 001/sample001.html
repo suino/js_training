@@ -7,15 +7,17 @@
 <body>
     <h1>JavaScriptの勉強</h1>
     <script>
-        function sum (a, b) {
-            var localVar = "hoge";
-            return a + b;
+        var sales = [100, 200, 150];
+        console.log(sales[1]);
+
+        // 連想配列
+        // keyは''をつけてもつけなくても大丈夫そう
+        var sales2 = {
+            year2000 : 100,
+            year2001 : 200,
+            year2002 : 150
         }
-
-        var result = sum(1, 2);
-
-        alert(result);
-        // エラーになる : console.log(localVar);
+        console.log(sales2['year2001']);
     </script>
 </body>
 </html>
