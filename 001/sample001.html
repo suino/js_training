@@ -7,24 +7,13 @@
 <body>
     <h1>JavaScriptの勉強</h1>
     <script>
-        var direction = "right";
-        var x, y;
-        switch (direction) {
-            case "right":
-                x += 10;
-                break;
-            case "left":
-                x -= 10;
-                break;
-            case "up":
-                y += 10;
-                break;
-            case "down":
-                y -= 10;
-                break;
-            default:
-                break;
+        function sum (a, b) {
+            return a + b;
         }
+
+        var result = sum(1, 2);
+
+        alert(result);
     </script>
 </body>
 </html>
