@@ -6,16 +6,12 @@
 </head>
 <body>
     <h1>JavaScriptの勉強</h1>
-    <p>この果物の名前は<span id="fruit">みかん</span>です</p>
-    <p>価格: <input type="text" id="price">円</p>
+    <p><input type="button" value="click!" id="myButton"></p>
     <script>
-        // DOM - Document Object Model
-
-        var fruitElement = document.getElementById('fruit');
-        fruitElement.innerHTML = 'りんご';
-
-        var priceElement = document.getElementById('price');
-        priceElement.value = 500;
+        var myButtonElement = document.getElementById('myButton');
+        myButtonElement.onclick = function () {
+            alert('clicked!');
+        }
 
     </script>
 </body>
