@@ -7,15 +7,24 @@
 <body>
     <h1>JavaScriptの勉強</h1>
     <script>
-        var message = 'Hello' + 'World, Again!'; // 文字列
-        var d1 = -5.5;      // 数値
-        var d2 = false;     // 真偽値
-        var d3 = undefined; // 未定義
-        var d4 = null;      // 何もない
-        var x = 5 / 5;
-        x++;
-        x += 5; // x = x + 5
-        alert(message);
+        var direction = "right";
+        var x, y;
+        switch (direction) {
+            case "right":
+                x += 10;
+                break;
+            case "left":
+                x -= 10;
+                break;
+            case "up":
+                y += 10;
+                break;
+            case "down":
+                y -= 10;
+                break;
+            default:
+                break;
+        }
     </script>
 </body>
 </html>
