@@ -6,16 +6,28 @@
 </head>
 <body>
     <p>jQueryの勉強</p>
-    <!-- http://jquery.com -->
+    <ul id="main">
+        <li>0</li>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li>
+            3
+            <ul id="sub">
+                <li>3-0</li>
+                <li>3-1</li>
+                <li class="item">3-2</li>
+                <li class="item">3-3</li>
+                <li>3-4</li>
+        </li>
+    </ul>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
-        // ドキュメントが読み込まれたらreadyの引数に当たる処理をしろ、という書き方
-        // $(document).ready(function() {
-        // 以下のようにも書ける
         $(function() {
-            // selector: 処理対象となるDOM要素 $('p')の部分
-            // method:   処理 .css... の部分　つなげて書ける（メソッドチェーン）
-            $('p').css('color', 'red').hide('slow');
+            // html要素: p, h1, ul
+            // id #main
+            // class .item
+            $('#sub').css('color', 'red');
+            $('.item').css('fontWeight', 'bold');
         });
     </script>
 </body>
