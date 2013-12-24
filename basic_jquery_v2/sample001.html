@@ -6,7 +6,17 @@
 </head>
 <body>
     <p>jQueryの勉強</p>
+    <!-- http://jquery.com -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
+        // ドキュメントが読み込まれたらreadyの引数に当たる処理をしろ、という書き方
+        // $(document).ready(function() {
+        // 以下のようにも書ける
+        $(function() {
+            // selector: 処理対象となるDOM要素 $('p')の部分
+            // method:   処理 .css... の部分　つなげて書ける（メソッドチェーン）
+            $('p').css('color', 'red').hide('slow');
+        });
     </script>
 </body>
 </html>
