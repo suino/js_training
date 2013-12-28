@@ -7,27 +7,37 @@
 <body>
     <p>jQueryの勉強</p>
     <ul id="main">
-        <li>0</li>
-        <li class="item">1</li>
-        <li class="item">2</li>
+        <li>0 #main</li>
+        <li class="item">1 #main .item</li>
+        <li class="item">2 #main .item</li>
         <li>
-            3
+            3 #main
             <ul id="sub">
-                <li>3-0</li>
-                <li>3-1</li>
-                <li class="item">3-2</li>
-                <li class="item">3-3</li>
+                <li>3-0 #main #sub</li>
+                <!--<li>3-1 #main #sub</li>-->
+                <li class="item">3-1 #main #sub .item</li>
+                <li class="item">3-2 #main #sub .item</li>
+                <li class="item">3-3 #main #sub .item</li>
                 <li>3-4</li>
         </li>
     </ul>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
         $(function() {
-            // html要素: p, h1, ul
-            // id #main
-            // class .item
-            $('#sub').css('color', 'red');
-            $('.item').css('fontWeight', 'bold');
+            /** セレクタ.メソッド
+            * # id
+            * . class
+            * > 直下の子要素
+            *   それ以下の要素
+            * , 複数の要素
+            * + 隣接する要素（の後ろの方）
+            **/
+            // $('#main > .item').css('fontWeight', 'bold'); // main直下のitem => 1, 2（3-2、3-3は直下ではないので当てはまらない）
+            // $('#main .item').css('fontWeight', 'bold'); // mainとitemを両方含むもの => 1, 2, 3-2, 3-3
+            // $('#main, .item').css('fontWeight', 'bold'); // mainかitemをどちらか含むもの => 全て
+            // $('#main + .item').css('fontWeight', 'bold'); // mainの隣のitem => なし（両方含んでいるものはあるけど）
+            // $('.item + .item').css('fontWeight', 'bold'); // itemの隣のitem => 2, 3-2, 3-3（3個続いた場合、後ろの2個が対象になる）
+            $('li + li').css('fontWeight', 'bold'); // liの隣のli => 0以外全て
         });
     </script>
 </body>
